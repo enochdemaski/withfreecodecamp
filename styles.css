@@ -12,7 +12,7 @@ nav {
   padding: 20px;
 }
 
-.logo {
+#logo {
   text-transform: uppercase;
 }
 
@@ -26,6 +26,7 @@ nav {
 #menu li {
   list-style: none;
 }
+
 /* end of navbar */
 
 @media (max-width: 640px) {
@@ -52,6 +53,10 @@ nav {
 @media (min-width: 768px) {
   body {
     background-color: gray;
+  }
+
+  .menu-btn {
+    display: none;
   }
 }
 
