@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-/* body {
-  background-color: #fff;
-} */
+body {
+  background-color: blue;
+}
 
 /* Start of navbar */
 .nav {
@@ -65,7 +65,7 @@
     justify-content: space-around;
     padding-top: 5px;
     padding-left: 0pz;
-    width: 60%;
+    width: 50%;
     height: 60%;
     border-top-left-radius: 0px;
     position: relative;
@@ -81,11 +81,18 @@
   body {
     background-color: orange;
   }
+  .menu {
+    width: 40%;
+  }
 }
 
 @media (min-width: 1280px) {
   body {
     background-color: purple;
+  }
+
+  .menu {
+    width: 40%;
   }
 }
 
