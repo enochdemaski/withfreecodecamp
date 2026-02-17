@@ -19,6 +19,13 @@ body {
 #logo {
   text-transform: uppercase;
 }
+.about {
+  margin-top: -13%;
+  padding: 2px;
+  font-size: 30px;
+  text-align: center;
+  width: 78%;
+}
 
 .menu {
   display: flex;
@@ -42,7 +49,13 @@ body {
   display: block;
 }
 
+#toggle-btn {
+  position: relative;
+  z-index: 200;
+}
+
 .menu li {
+  padding: 15px;
   list-style: none;
 }
 
@@ -59,12 +72,16 @@ body {
     background-color: gray;
   }
 
+  .about {
+    display: none;
+  }
+
   .menu {
     display: flex;
     background-color: #fff;
     justify-content: space-around;
     padding-top: 5px;
-    padding-left: 0pz;
+    padding-left: 0px;
     width: 50%;
     height: 60%;
     border-top-left-radius: 0px;

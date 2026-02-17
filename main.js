@@ -2,8 +2,14 @@ const menuBtn = document.getElementById("toggle-btn");
 
 const mobileMenu = document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", (e) => {
   mobileMenu.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    mobileMenu.classList.remove("show");
+  }
 });
 
 // const fruits = ["apple", "banana", "orange"];
