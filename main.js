@@ -7,7 +7,7 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+  if (mobileMenu.contains(e.target) || !menuBtn.contains(e.target)) {
     mobileMenu.classList.remove("show");
   }
 });

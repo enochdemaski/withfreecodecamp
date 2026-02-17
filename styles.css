@@ -19,9 +19,14 @@ body {
 #logo {
   text-transform: uppercase;
 }
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
 .about {
   margin-top: -20%;
-  padding: 6px;
+  padding: 16px;
   font-size: 20px;
   width: 78%;
 }
@@ -34,6 +39,7 @@ body {
   background-color: rgba(166, 168, 168, 0.6);
   height: 100vh;
   width: 70%;
+  transition: transform 0.8s ease-in;
   border-top-left-radius: 80px;
   padding-top: 4em;
   padding-left: 1em;
@@ -49,6 +55,8 @@ body {
 }
 
 #toggle-btn {
+  width: 45px;
+  border-radius: 18px;
   position: relative;
   z-index: 200;
 }
@@ -58,11 +66,29 @@ body {
   list-style: none;
 }
 
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu li:hover {
+  border: 2px solid gray;
+  width: 60%;
+  height: 2px;
+  padding-bottom: 35px;
+}
 /* end of navbar */
 
 @media (min-width: 641px) {
   body {
     background-color: green;
+  }
+
+  .about {
+    margin-top: -10%;
+    padding: 16px;
+    font-size: 20px;
+    width: 78%;
   }
 }
 
@@ -90,6 +116,9 @@ body {
 
   #toggle-btn {
     display: none;
+  }
+  .menu a {
+    color: #000;
   }
 }
 
