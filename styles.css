@@ -4,8 +4,25 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-bg: #fff;
+  --color-fg: #000;
+}
+
+html {
+  --color-bg: #121212;
+  --color-fg: #f9f9f9;
+}
+
 body {
-  background-color: blue;
+  background-color: #fff;
+  color: #000;
+  transition: 0.9s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
 }
 
 /* Start of navbar */
@@ -39,7 +56,7 @@ body {
   background-color: rgba(166, 168, 168, 0.6);
   height: 100vh;
   width: 70%;
-  transition: transform 0.8s ease-in;
+  transition: 0.9s ease-in;
   border-top-left-radius: 80px;
   padding-top: 4em;
   padding-left: 1em;
@@ -52,6 +69,11 @@ body {
 
 .menu.show {
   display: block;
+}
+
+#dark-mode-btn.dark {
+  background-color: #000;
+  color: #fff;
 }
 
 #toggle-btn {
