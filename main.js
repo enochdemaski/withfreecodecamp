@@ -1,9 +1,20 @@
 const menuBtn = document.getElementById("toggle-btn");
-const darkMode = document.getElementById("dark-mode-btn");
 const mobileMenu = document.getElementById("menu");
+const darkMode = document.getElementById("dark-mode-btn");
+const nav = document.getElementById("nav");
+const a = document.querySelector("a logo");
+const icon = darkMode.querySelector("i");
 
+let isopen = false;
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("show");
+  isopen = !isopen;
+
+  if (isopen) {
+    menuBtn.classList.replace("fa-solid fa-xmark");
+  } else {
+    menuBtn.classList.replace("fa-solid fa-fa bars");
+  }
 });
 
 document.addEventListener("click", (e) => {
@@ -12,8 +23,27 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// FOR DARK AND LIGHT MODE
+let isDark = false;
 darkMode.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
+  isDark = !isDark;
+
+  if (isDark) {
+    icon.classList.replace("fa-moon", "fa-sun");
+    nav.style.backgroundColor = "#fff";
+  } else {
+    icon.classList.replace("fa-sun", "fa-moon");
+    nav.style.backgroundColor = "#000";
+  }
+
+  // if (isLight) {
+  //   nav.style.backgroundColor = "#000";
+  //   logo.color = "#fff";
+  // } else {
+  //   nav.style.backgroundColor = "#fff";
+  //   logo.color = "#000";
+  // }
 });
 
 // const fruits = ["apple", "banana", "orange"];

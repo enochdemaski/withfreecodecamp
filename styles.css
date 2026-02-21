@@ -20,14 +20,9 @@ body {
   transition: 0.9s ease;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #fff;
-}
-
 /* Start of navbar */
 .nav {
-  background-color: #fff;
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -39,7 +34,7 @@ body.dark-mode {
 
 .nav a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 .about {
   margin-top: -20%;
@@ -69,6 +64,15 @@ body.dark-mode {
 
 .menu.show {
   display: block;
+}
+
+/* .logo {
+  color: #fff;
+} */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
 }
 
 #dark-mode-btn.dark {
