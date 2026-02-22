@@ -4,17 +4,12 @@ const darkMode = document.getElementById("dark-mode-btn");
 const nav = document.getElementById("nav");
 const a = document.querySelector("a logo");
 const icon = darkMode.querySelector("i");
+const icons = menuBtn.querySelector("i");
 
-let isopen = false;
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("show");
-  isopen = !isopen;
-
-  if (isopen) {
-    menuBtn.classList.replace("fa-solid fa-xmark");
-  } else {
-    menuBtn.classList.replace("fa-solid fa-fa bars");
-  }
+  icons.classList.toggle("fa-bars");
+  icons.classList.toggle("fa-xmark");
 });
 
 document.addEventListener("click", (e) => {
