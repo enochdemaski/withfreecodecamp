@@ -8,8 +8,14 @@ const icons = menuBtn.querySelector("i");
 
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("show");
-  icons.classList.toggle("fa-bars");
-  icons.classList.toggle("fa-xmark");
+  if (icons.classList.contains("fa-bars")) {
+    icons.classList.replace("fa-bars", "fa-xmark");
+  } else {
+    icons.classList.replace("fa-xmark", "fa-bars");
+  }
+
+  // icons.classList.toggle("fa-bars");
+  // icons.classList.toggle("fa-xmark");
 });
 
 document.addEventListener("click", (e) => {
