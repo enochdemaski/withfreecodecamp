@@ -1,11 +1,13 @@
 const menuBtn = document.getElementById("toggle-btn");
+// const mobileMenuL = document.getElementById("menu a");
 const mobileMenu = document.getElementById("menu");
 const darkMode = document.getElementById("dark-mode-btn");
 const nav = document.getElementById("nav");
-const a = document.querySelector("a logo");
+const logo = document.querySelector("#nav a #logo");
 const icon = darkMode.querySelector("i");
 const icons = menuBtn.querySelector("i");
 
+//MENU BTN
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("show");
   if (icons.classList.contains("fa-bars")) {
@@ -21,6 +23,7 @@ menuBtn.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
   if (mobileMenu.contains(e.target) || !menuBtn.contains(e.target)) {
     mobileMenu.classList.remove("show");
+    icons.classList.replace("fa-xmark", "fa-bars");
   }
 });
 
@@ -32,10 +35,18 @@ darkMode.addEventListener("click", () => {
 
   if (isDark) {
     icon.classList.replace("fa-moon", "fa-sun");
+    darkMode.style.backgroundColor = "#fff";
+    darkMode.style.color = "#000";
+
     nav.style.backgroundColor = "#fff";
+    logo.style.color = "#000";
   } else {
     icon.classList.replace("fa-sun", "fa-moon");
+    darkMode.style.backgroundColor = "#000";
+    darkMode.style.color = "#fff";
+
     nav.style.backgroundColor = "#000";
+    logo.style.color = "#fff";
   }
 
   // if (isLight) {
@@ -46,6 +57,8 @@ darkMode.addEventListener("click", () => {
   //   logo.color = "#000";
   // }
 });
+
+// DONT GO DOWN
 
 // const fruits = ["apple", "banana", "orange"];
 // const [first, , third] = fruits;

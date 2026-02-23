@@ -28,13 +28,14 @@ body {
   padding: 20px;
 }
 
-#logo {
+a #logo {
   text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav a {
   text-decoration: none;
-  color: #fff;
 }
 .about {
   margin-top: -20%;
@@ -70,9 +71,12 @@ body {
   width: 5%;
   height: 10%;
   margin-top: 2%;
+  margin-left: 9em;
   border: none;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #000;
+  z-index: 200;
+  color: #fff;
 }
 
 #dark-mode-btn i {
