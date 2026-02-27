@@ -210,8 +210,8 @@ textarea::placeholder {
 }
 
 .send {
-  width: 55%;
-  height: 35px;
+  width: 65%;
+  height: 40px;
   font-size: 16px;
   border: 2px solid #808080;
   border-radius: 20px;
