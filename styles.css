@@ -127,6 +127,7 @@ body.dark-mode {
   height: 60vh;
   position: relative;
   /* top: 1em; */
+  border: 1px solid #fff;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
 }
@@ -139,8 +140,76 @@ body.dark-mode {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  filter: brightness(0.3) blur(1px);
+}
+
+/* CONTACT FORM */
+
+.contact {
+  background-color: #f4f4f4;
+  height: 25em;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 2em;
+}
+
+.form {
+  background-color: #fff;
+  border: 2px dashed #000;
+  border-radius: 40px;
+  height: 23em;
+  width: 95%;
+  padding-top: 10px;
+  padding-left: 5em;
+}
+
+.con-head {
+  margin: auto;
+  font-size: 50px;
+}
+.email {
+  width: 70%;
+  height: 50px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-top: 10px;
+  outline: none;
+}
+
+.tel {
+  width: 70%;
+  height: 50px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-top: 20px;
+  outline: none;
+}
+
+.textarea {
+  width: 70%;
+  height: 50px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-top: 35px;
+  outline: none;
+}
+
+.send {
+  width: 55%;
+  height: 35px;
+  font-size: 16px;
+  border: 2px solid #808080;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 13px;
+  margin-left: 20px;
 }
 
 @media (min-width: 641px) {
