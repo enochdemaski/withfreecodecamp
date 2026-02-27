@@ -140,9 +140,17 @@ body.dark-mode {
   color: #fff;
 }
 
+.gree {
+  text-transform: capitalize;
+  font-size: 23px;
+  color: #fff;
+  margin-top: 10px;
+}
+
 .name {
   text-transform: capitalize;
   color: #fff;
+  margin-top: 10px;
 }
 
 .text {
