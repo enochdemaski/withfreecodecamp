@@ -153,7 +153,7 @@ body.dark-mode {
   width: 100%;
   margin-top: 10px;
   padding-top: 10px;
-  padding-left: 2em;
+  padding-left: 4px;
 }
 
 .form {
@@ -161,17 +161,26 @@ body.dark-mode {
   border: 2px dashed #000;
   border-radius: 40px;
   height: 23em;
-  width: 95%;
+  width: 97%;
   padding-top: 10px;
-  padding-left: 5em;
+  padding-left: 3em;
+  margin-left: 5px;
 }
 
 .con-head {
   margin: auto;
   font-size: 50px;
 }
+
+input::placeholder {
+  font-size: 20px;
+}
+
+textarea::placeholder {
+  font-size: 20px;
+}
 .email {
-  width: 70%;
+  width: 80%;
   height: 50px;
   font-weight: bold;
   border: none;
@@ -181,7 +190,7 @@ body.dark-mode {
 }
 
 .tel {
-  width: 70%;
+  width: 80%;
   height: 50px;
   font-weight: bold;
   border: none;
@@ -191,7 +200,7 @@ body.dark-mode {
 }
 
 .textarea {
-  width: 70%;
+  width: 80%;
   height: 50px;
   font-weight: bold;
   border: none;
