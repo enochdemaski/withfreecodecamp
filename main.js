@@ -1,11 +1,12 @@
+const video = document.getElementById("video");
 const menuBtn = document.getElementById("toggle-btn");
-// const mobileMenuL = document.getElementById("menu a");
 const mobileMenu = document.getElementById("menu");
 const darkMode = document.getElementById("dark-mode-btn");
 const nav = document.getElementById("nav");
 const logo = document.querySelector("#nav a #logo");
 const icon = darkMode.querySelector("i");
 const icons = menuBtn.querySelector("i");
+const greetCustomer = document.querySelector("#greet-customers");
 
 //MENU BTN
 menuBtn.addEventListener("click", () => {
@@ -15,9 +16,8 @@ menuBtn.addEventListener("click", () => {
   } else {
     icons.classList.replace("fa-xmark", "fa-bars");
   }
-
-  // icons.classList.toggle("fa-bars");
-  // icons.classList.toggle("fa-xmark");
+  //   // icons.classList.toggle("fa-bars");
+  //   // icons.classList.toggle("fa-xmark");
 });
 
 document.addEventListener("click", (e) => {
@@ -37,26 +37,45 @@ darkMode.addEventListener("click", () => {
     icon.classList.replace("fa-moon", "fa-sun");
     darkMode.style.backgroundColor = "#fff";
     darkMode.style.color = "#000";
-
     nav.style.backgroundColor = "#fff";
     logo.style.color = "#000";
   } else {
     icon.classList.replace("fa-sun", "fa-moon");
     darkMode.style.backgroundColor = "#000";
     darkMode.style.color = "#fff";
-
     nav.style.backgroundColor = "#000";
     logo.style.color = "#fff";
   }
-
-  // if (isLight) {
-  //   nav.style.backgroundColor = "#000";
-  //   logo.color = "#fff";
-  // } else {
-  //   nav.style.backgroundColor = "#fff";
-  //   logo.color = "#000";
-  // }
 });
+// VIDEO
+
+// POP
+setTimeout(() => {
+  const currentHour = new Date().getHours();
+  let welcomeText = "";
+
+  if (currentHour < 12) {
+    welcomeText = "Good Morning, welcome to my portfolio.";
+  } else if (currentHour < 18) {
+    welcomeText = "Good Afternoon, welcome to my portfolio.";
+  } else {
+    welcomeText = "Good Evening, welcome to my portfolio.";
+  }
+  setTimeout(() => {
+    welcomeText = "";
+  }, 300);
+
+  greetCustomer.textContent = welcomeText;
+}, 1000);
+
+// if (isLight) {
+//   nav.style.backgroundColor = "#000";
+//   logo.color = "#fff";
+// } else {
+//   nav.style.backgroundColor = "#fff";
+//   logo.color = "#000";
+// }
+// });
 
 // DONT GO DOWN
 
