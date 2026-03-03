@@ -7,6 +7,7 @@ const logo = document.querySelector("#nav a #logo");
 const icon = darkMode.querySelector("i");
 const icons = menuBtn.querySelector("i");
 const greetCustomer = document.querySelector("#greet-customers");
+const contact = document.getElementById("reach");
 
 //MENU BTN
 menuBtn.addEventListener("click", () => {
@@ -39,12 +40,14 @@ darkMode.addEventListener("click", () => {
     darkMode.style.color = "#000";
     nav.style.backgroundColor = "#fff";
     logo.style.color = "#000";
+    contact.style.color = "#fff";
   } else {
     icon.classList.replace("fa-sun", "fa-moon");
     darkMode.style.backgroundColor = "#000";
     darkMode.style.color = "#fff";
     nav.style.backgroundColor = "#000";
     logo.style.color = "#fff";
+    contact.style.color = "#000";
   }
 });
 // VIDEO

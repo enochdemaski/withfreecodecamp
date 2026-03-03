@@ -12,6 +12,7 @@
 html {
   --color-bg: #121212;
   --color-fg: #f9f9f9;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -120,14 +121,13 @@ body.dark-mode {
   height: 2px;
   padding-bottom: 35px;
 }
-/* HERO SECTION */
 
 .video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   object-fit: cover;
   z-index: -1;
   border-bottom-left-radius: 80px;
@@ -189,6 +189,14 @@ body.dark-mode {
   font-weight: bold;
   margin-top: 5%;
   margin-left: 15px;
+}
+
+/* ABOUT US */
+
+.know {
+  border: 2px solid #000;
+  height: 70vh;
+  margin-top: 25px;
 }
 
 /* CONTACT FORM */
@@ -265,6 +273,13 @@ textarea::placeholder {
   font-weight: bold;
   margin-top: 13px;
   margin-left: 20px;
+}
+
+/* PROJECTS */
+.project {
+  border: 2px solid #000;
+  height: 80vh;
+  margin-top: 10px;
 }
 
 @media (min-width: 641px) {
