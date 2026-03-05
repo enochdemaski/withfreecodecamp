@@ -145,8 +145,8 @@ body.dark-mode {
   height: 63vh;
   object-fit: cover;
   z-index: -1;
-  border-bottom-left-radius: 80px;
-  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   filter: brightness(0.3) blur(1px);
 }
 
@@ -174,24 +174,21 @@ body.dark-mode {
   color: #fff;
   text-transform: capitalize;
   background: rgba(255, 255, 255, 0.1);
-  height: 15em;
+  /* height: 15em; */
   width: 20em;
   margin-top: 10px;
   margin-left: 10px;
   padding: 5px;
 }
 
-/* .greet-customers {
+.greet-customers {
   background: rgba(255, 255, 255, 0.1);
-  font-size: 30px;
+  font-size: 10px;
   text-transform: capitalize;
-  width: 58%;
-  margin-left: auto;
+  width: 77%;
   padding: 1px;
-  position: relative;
-  top: -8rem;
   color: #fff;
-} */
+}
 
 .reach {
   background: rgba(255, 255, 255, 0.1);
@@ -210,7 +207,7 @@ body.dark-mode {
 
 .know {
   border: 2px solid #000;
-  height: 70vh;
+  /* height: 70vh; */
   margin-top: 20px;
 }
 
@@ -306,7 +303,7 @@ textarea::placeholder {
 /* PROJECTS */
 .project {
   border: 2px solid #000;
-  height: 80vh;
+  /* height: 80vh; */
   margin-top: 10px;
 }
 
