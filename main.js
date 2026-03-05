@@ -53,16 +53,34 @@ darkMode.addEventListener("click", () => {
 // VIDEO
 
 // POP
+// setTimeout(() => {
+//   const currentHour = new Date().getHours();
+//   let welcomeText = "";
+
+//   if (currentHour < 12) {
+//     welcomeText = "Good Morning, welcome to my portfolio.";
+//   } else if (currentHour < 18) {
+//     welcomeText = "Good Afternoon, welcome to my portfolio.";
+//   } else {
+//     welcomeText = "Good Evening, welcome to my portfolio.";
+//   }
+//   greetCustomer.textContent = welcomeText;
+
+//   setTimeout(() => {
+//     greetCustomer.remove();
+//   }, 2000);
+// }, 1000);
+
 setTimeout(() => {
   const currentHour = new Date().getHours();
   let welcomeText = "";
 
   if (currentHour < 12) {
-    welcomeText = "Good Morning, welcome to my portfolio.";
+    alert("Good morning, welcome to my portfolio.");
   } else if (currentHour < 18) {
-    welcomeText = "Good Afternoon, welcome to my portfolio.";
+    alert("Good afternoon, welcome to my portfolio.");
   } else {
-    welcomeText = "Good Evening, welcome to my portfolio.";
+    alert("Good evening, welcome to my portfolio.");
   }
   greetCustomer.textContent = welcomeText;
 
