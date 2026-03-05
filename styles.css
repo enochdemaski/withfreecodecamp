@@ -218,9 +218,10 @@ body.dark-mode {
 
 .contact {
   background-color: #f4f4f4;
-  height: 25em;
+  border: 2px solid #000;
+  /* height: 25em; */
   width: 100%;
-  margin-top: 10%;
+  margin-top: 3%;
   padding-top: 10px;
   padding-left: 4px;
 }
@@ -229,7 +230,7 @@ body.dark-mode {
   background-color: #fff;
   border: 2px dashed #000;
   border-radius: 40px;
-  height: 23em;
+  /* min-height: 25em; */
   width: 97%;
   padding-top: 10px;
   padding-left: 3em;
@@ -248,6 +249,17 @@ input::placeholder {
 textarea::placeholder {
   font-size: 20px;
 }
+
+.user-name {
+  width: 80%;
+  height: 50px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-top: 10px;
+  outline: none;
+}
+
 .email {
   width: 80%;
   height: 50px;
@@ -279,7 +291,7 @@ textarea::placeholder {
 }
 
 .send {
-  width: 65%;
+  width: 70%;
   height: 40px;
   font-size: 16px;
   border: 2px solid #808080;
@@ -287,7 +299,8 @@ textarea::placeholder {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 13px;
-  margin-left: 20px;
+  margin-bottom: 8px;
+  margin-left: 22px;
 }
 
 /* PROJECTS */
