@@ -64,12 +64,27 @@ setTimeout(() => {
   } else {
     welcomeText = "Good Evening, welcome to my portfolio.";
   }
-  setTimeout(() => {
-    welcomeText = "";
-  }, 300);
-
   greetCustomer.textContent = welcomeText;
+
+  setTimeout(() => {
+    greetCustomer.remove();
+  }, 2000);
 }, 1000);
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const currentHour = new Date().getHours();
+//   let welcomeText = "";
+
+//   if (currentHour < 12) {
+//     welcomeText = "Good Morning, welcome to my portfolio.";
+//   } else if (currentHour < 18) {
+//     welcomeText = "Good Afternoon, welcome to my portfolio.";
+//   } else {
+//     welcomeText = "Good Evening, welcome to my portfolio.";
+//   }
+
+//   greetCustomer.textContent = welcomeText;
+// });
 
 // if (isLight) {
 //   nav.style.backgroundColor = "#000";

@@ -34,12 +34,6 @@ body {
   z-index: 1000;
 }
 
-.img-container {
-  background-color: blue;
-  margin-left: -10px;
-  width: 32%;
-}
-
 a #logo {
   text-transform: uppercase;
   text-decoration: none;
@@ -47,11 +41,13 @@ a #logo {
 }
 
 .greet-customers {
-  background: rgba(255, 255, 255, 0.1);
-  font-size: 8px;
+  background: rgba(221, 221, 219, 0.6);
+  font-size: 20px;
   text-transform: capitalize;
-  padding: 1px;
-  color: #fff;
+  margin-top: 5px;
+  padding: 5px;
+  padding-left: 50px;
+  color: #000;
 }
 
 .nav a {
