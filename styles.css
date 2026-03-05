@@ -48,9 +48,8 @@ a #logo {
 
 .greet-customers {
   background: rgba(255, 255, 255, 0.1);
-  font-size: 10px;
+  font-size: 8px;
   text-transform: capitalize;
-  width: 77%;
   padding: 1px;
   color: #fff;
 }
