@@ -8,6 +8,9 @@ const icon = darkMode.querySelector("i");
 const icons = menuBtn.querySelector("i");
 const greetCustomer = document.querySelector("#greet-customers");
 const contact = document.getElementById("reach");
+const track = document.querySelector(".projectss");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
 
 //MENU BTN
 menuBtn.addEventListener("click", () => {
@@ -17,8 +20,8 @@ menuBtn.addEventListener("click", () => {
   } else {
     icons.classList.replace("fa-xmark", "fa-bars");
   }
-  //   // icons.classList.toggle("fa-bars");
-  //   // icons.classList.toggle("fa-xmark");
+  // icons.classList.toggle("fa-bars");
+  // icons.classList.toggle("fa-xmark");
 });
 
 document.addEventListener("click", (e) => {
@@ -70,6 +73,64 @@ setTimeout(() => {
     greetCustomer.remove();
   }, 2000);
 }, 1000);
+
+let position = 0;
+const slideWidth = 500;
+next.addEventListener("click", () => {
+  position -= slideWidth;
+  track.style.transform = `translateX(${position}px)`;
+});
+
+prev.addEventListener("click", () => {
+  position += slideWidth;
+  track.style.transform = `translateX(${position}px)`;
+});
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*MODEL */
+
+// const model = document.getElementById("model");
+// const modelBtn = document.getElementById("modelbtn");
+// const closeButton = document.getElementById("close-modal-btn");
+
+// modelBtn.addEventListener("click", () => {
+//   model.show();
+// });
+
+// closeButton.addEventListener("click", () => {
+//   model.close();
+// });
+
+/*ANIMATION */
+// const playBtn = document.querySelector("#playBtn");
+// const pauseBtn = document.querySelector("#pauseBtn");
+// const square = document.querySelector("#square");
+
+// const animation = square.animate(
+//   [{ transform: "translateX(0px)" }, { transform: "translateX(100px)" }],
+
+//   {
+//     duration: 2000,
+//     iterations: Infinity,
+//     direction: "alternate",
+//     easing: "ease-in-out",
+//   },
+// );
+
+// animation.onfinish = () => {
+//   console.log("FINISHED");
+// };
+
+// playBtn.addEventListener("click", () => {
+//   animation.play();
+//   console.log("Played");
+// });
+
+// pauseBtn.addEventListener("click", () => {
+//   animation.pause();
+//   console.log("Paused");
+// });
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const currentHour = new Date().getHours();
