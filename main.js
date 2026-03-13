@@ -75,7 +75,8 @@ setTimeout(() => {
 }, 1000);
 
 let position = 0;
-const slideWidth = 500;
+const slideWidth = 400;
+
 next.addEventListener("click", () => {
   position -= slideWidth;
   track.style.transform = `translateX(${position}px)`;
