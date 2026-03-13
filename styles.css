@@ -209,6 +209,7 @@ body.dark-mode {
 .about-me {
   text-transform: uppercase;
   font-weight: bolder;
+  text-align: center;
 }
 .know {
   background-color: #fff;
@@ -221,9 +222,9 @@ body.dark-mode {
   font-size: 14px;
 }
 
-.para {
+/* .para {
   margin-top: 6px;
-}
+} */
 
 /* PROJECTS */
 .project {
