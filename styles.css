@@ -161,11 +161,15 @@ body.dark-mode {
   filter: brightness(0.3) blur(1px);
 }
 
+.details {
+  margin-top: 20%;
+}
+
 .greetings {
   text-transform: capitalize;
   color: #fff;
   padding-left: 10px;
-  margin-top: 13px;
+  margin-top: 10px;
 }
 
 .gree {
