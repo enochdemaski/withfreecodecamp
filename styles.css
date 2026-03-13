@@ -248,7 +248,7 @@ body.dark-mode {
   overflow-x: auto;
   background-color: var(--color-bg);
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: transform 0.5s ease;
 }
 
