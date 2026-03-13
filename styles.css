@@ -230,7 +230,6 @@ body.dark-mode {
   background-color: #fff;
   border: 2px dashed #000;
   border-radius: 40px;
-  /* min-height: 25em; */
   width: 97%;
   padding-top: 10px;
   padding-left: 3em;
@@ -303,13 +302,20 @@ textarea::placeholder {
   margin-left: 22px;
 }
 
+.know-us {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
 /* PROJECTS */
 .project {
   background-color: var(--color-bgs);
   border: 2px solid #000;
   margin-top: 10px;
   padding: 5px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .project-title {
@@ -342,13 +348,13 @@ textarea::placeholder {
 }
 
 .prev {
-  top: 20em;
+  top: 10em;
   /* margin-left: 5px; */
 }
 
 .next {
-  bottom: 26em;
-  left: 92.5%;
+  bottom: 8em;
+  left: 92.7%;
 }
 
 .no1 {
