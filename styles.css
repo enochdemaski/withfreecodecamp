@@ -338,16 +338,16 @@ textarea::placeholder {
 .control-btn {
   width: 6%;
   aspect-ratio: 1/1;
-  position: absolute;
+  position: sticky;
 }
 
 .prev {
-  top: 73em;
+  top: 20em;
   /* margin-left: 5px; */
 }
 
 .next {
-  top: 73em;
+  bottom: 26em;
   left: 92.5%;
 }
 
