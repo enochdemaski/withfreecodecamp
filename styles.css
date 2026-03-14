@@ -241,6 +241,7 @@ body.dark-mode {
   margin-top: 16px;
   padding: 5px;
   padding-top: 10px;
+  position: relative;
 }
 
 .project-title {
@@ -256,7 +257,6 @@ body.dark-mode {
   overflow-x: auto;
   background-color: var(--color-bg);
   border-radius: 10px;
-  position: relative;
 }
 
 .carousel-item {
@@ -274,17 +274,17 @@ body.dark-mode {
   width: 7%;
   padding: 1px;
   aspect-ratio: 1/1;
-  position: absolute;
+  position: fixed;
   z-index: 1;
 }
 
 .prev {
-  top: 4em;
+  top: 5em;
   left: 3%;
 }
 
 .next {
-  bottom: 41em;
+  bottom: 40em;
   left: 90.1%;
 }
 
