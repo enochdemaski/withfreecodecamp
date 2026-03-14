@@ -28,7 +28,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(131, 131, 131, 0.9);
+  background: rgba(83, 83, 83, 0.9);
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -67,7 +67,7 @@ a #logo {
   gap: 15px;
   font-size: 20px;
   text-transform: capitalize;
-  background-color: rgba(166, 168, 168, 0.6);
+  background-color: rgba(92, 92, 92, 0.9);
   height: 100vh;
   width: 70%;
   transition: 0.9s ease-in;
@@ -217,7 +217,7 @@ body.dark-mode {
 }
 .know {
   background-color: #fff;
-  box-shadow: 10px 4px 10px 3px #808080;
+  box-shadow: 3px 4px 8px 3px #808080;
   border-radius: 20px;
   margin: 5px;
   margin-top: 20px;
@@ -232,10 +232,12 @@ body.dark-mode {
 } */
 
 /* PROJECTS */
-.project {
-  background-color: var(--color-bgs);
+.carousel {
+  background-color: var(--color-bg);
   box-shadow: 10px 4px 10px 3px #b8b8b8;
-  border-radius: 40px;
+  border-radius: 15px 10px;
+  /* border-radius: 40px 40px 10px 10px; */
+  margin: 5px;
   margin-top: 16px;
   padding: 5px;
   padding-top: 10px;
@@ -246,7 +248,7 @@ body.dark-mode {
   text-transform: uppercase;
 }
 
-.projectss {
+.carousel-container {
   display: flex;
   align-items: center;
   gap: 25px;
@@ -254,33 +256,36 @@ body.dark-mode {
   overflow-x: auto;
   background-color: var(--color-bg);
   border-radius: 10px;
-  /* overflow: hidden; */
-  transition: transform 0.5s ease;
+  position: relative;
 }
 
-.project-box {
+.carousel-item {
   box-shadow: 10px 4px 10px 3px #808080;
   padding: 15px;
   word-break: break-word;
-  min-width: 300px;
-  margin-left: 15px;
+  text-align: start;
+  margin-left: 5px;
   border-radius: 10px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
 }
 
 .control-btn {
-  width: 6%;
+  width: 7%;
+  padding: 1px;
   aspect-ratio: 1/1;
-  position: sticky;
+  position: absolute;
   z-index: 1;
 }
 
 .prev {
-  top: 10em;
+  top: 4em;
+  left: 3%;
 }
 
 .next {
-  bottom: 8em;
-  left: 92.7%;
+  bottom: 41em;
+  left: 90.1%;
 }
 
 .no1 {
@@ -298,6 +303,20 @@ body.dark-mode {
 .no4 {
   background-color: var(--color-bg);
 }
+
+/* .carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; */
+/* scrollbar-width: none; Hide scrollbar */
+/* } */
+/* .carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+img {
+  width: 100%;
+} */
 
 /* CONTACT FORM */
 
