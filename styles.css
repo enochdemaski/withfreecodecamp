@@ -276,16 +276,18 @@ body.dark-mode {
   aspect-ratio: 1/1;
   position: fixed;
   z-index: 1;
+  /* display: none; */
 }
 
 .prev {
   top: 5em;
-  left: 3%;
+  margin-left: 0;
+ 
 }
 
 .next {
   bottom: 40em;
-  left: 90.1%;
+  margin-left: 88%;
 }
 
 .no1 {
@@ -303,20 +305,6 @@ body.dark-mode {
 .no4 {
   background-color: var(--color-bg);
 }
-
-/* .carousel-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory; */
-/* scrollbar-width: none; Hide scrollbar */
-/* } */
-/* .carousel-item {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-}
-img {
-  width: 100%;
-} */
 
 /* CONTACT FORM */
 
@@ -440,7 +428,15 @@ textarea::placeholder {
     font-size: 20px;
     width: 78%;
   }
-}
+
+  /* .control-btn {
+    display: contents;
+    display: flex;
+    align-items: center;
+    width: 5%;
+  } */
+
+  
 
 @media (min-width: 768px) {
   body {
