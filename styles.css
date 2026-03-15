@@ -229,6 +229,16 @@ body.dark-mode {
   margin-left: 15px;
 }
 
+.my-avatar {
+  background-size: cover;
+  background-position: center;
+  width: 23em;
+  aspect-ratio: 1/1;
+  margin: 5% 10%;
+  border-radius: 50%;
+  border-top: 1px dotted #000;
+}
+
 /* ABOUT US */
 .about-me {
   text-transform: uppercase;
@@ -240,7 +250,7 @@ body.dark-mode {
   box-shadow: 3px 4px 8px 3px #808080;
   border-radius: 20px;
   margin: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: 500;
   text-align: justify;
   padding: 10px;
@@ -281,13 +291,18 @@ body.dark-mode {
 
 .carousel-item {
   box-shadow: 10px 4px 10px 3px #808080;
-  padding: 15px;
+  padding: 5px;
   word-break: break-word;
   text-align: start;
   margin-left: 5px;
   border-radius: 10px;
   flex: 0 0 100%;
   scroll-snap-align: center;
+}
+
+.img {
+  background-color: #121212;
+  border-radius: 5px 10px;
 }
 
 .control-btn {

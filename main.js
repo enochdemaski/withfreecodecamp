@@ -8,6 +8,7 @@ const icon = darkMode.querySelector("i");
 const icons = menuBtn.querySelector("i");
 const greetCustomer = document.querySelector("#greet-customers");
 const contact = document.getElementById("reach");
+const know = document.getElementById("know");
 const track = document.querySelector(".carousel-container");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
@@ -44,6 +45,8 @@ darkMode.addEventListener("click", () => {
     nav.style.backgroundColor = "#fff";
     logo.style.color = "#000";
     contact.style.color = "#fff";
+    know.style.color = "#fff";
+    know.style.backgroundColor = "#000";
   } else {
     icon.classList.replace("fa-sun", "fa-moon");
     darkMode.style.backgroundColor = "#000";
@@ -51,6 +54,8 @@ darkMode.addEventListener("click", () => {
     nav.style.backgroundColor = "#000";
     logo.style.color = "#fff";
     contact.style.color = "#000";
+    know.style.color = "#000";
+    know.style.backgroundColor = "#fff";
   }
 });
 // VIDEO
