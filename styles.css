@@ -85,6 +85,23 @@ a #logo {
   display: block;
 }
 
+.fa-solid {
+  margin-right: 10px;
+}
+
+.social-handles {
+  background-color: rgba(128, 128, 128, 0.9);
+  width: 86%;
+  padding: 10px;
+  margin-top: 16em;
+  margin-left: 7px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 10px 50px 10px 4px;
+}
+
 #dark-mode-btn {
   width: 5%;
   height: 10%;
@@ -119,6 +136,9 @@ body.dark-mode {
   z-index: 200;
   font-weight: bold;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
 }
 
@@ -276,13 +296,12 @@ body.dark-mode {
   aspect-ratio: 1/1;
   position: fixed;
   z-index: 1;
-  /* display: none; */
+  display: none;
 }
 
 .prev {
   top: 5em;
   margin-left: 0;
- 
 }
 
 .next {
@@ -429,14 +448,30 @@ textarea::placeholder {
     width: 78%;
   }
 
-  /* .control-btn {
+  .carousel {
+    width: 80%;
+    height: 350px;
+    margin: 10%;
+  }
+
+  .carousel-container {
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    overflow-y: hidden;
+  }
+
+  .control-btn {
     display: contents;
     display: flex;
     align-items: center;
     width: 5%;
-  } */
+  }
 
-  
+  .next {
+    margin-left: 41em;
+  }
+}
 
 @media (min-width: 768px) {
   body {
@@ -466,6 +501,35 @@ textarea::placeholder {
   .menu a {
     color: #000;
   }
+
+  .carousel {
+    width: 80%;
+    height: 450px;
+    margin: 10%;
+  }
+
+  .carousel-container {
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    overflow-y: hidden;
+  }
+
+  .carousel-item {
+    height: 250px;
+  }
+
+  .control-btn {
+    display: contents;
+    display: flex;
+    align-items: center;
+    width: 5%;
+  }
+
+  .next {
+    position: fixed;
+    margin-left: 56em;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -474,6 +538,30 @@ textarea::placeholder {
   }
   .menu {
     width: 40%;
+  }
+
+  .carousel {
+    width: 98%;
+    height: auto;
+    margin: 1%;
+  }
+
+  .carousel-container {
+    width: 95%;
+    height: 480px;
+  }
+
+  .carousel-item {
+    height: 350px;
+  }
+
+  .next {
+    top: 20px;
+    margin-left: 88em;
+  }
+
+  .prev {
+    top: 25px;
   }
 }
 
