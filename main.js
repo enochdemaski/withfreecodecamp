@@ -21,8 +21,8 @@ menuBtn.addEventListener("click", () => {
   } else {
     icons.classList.replace("fa-xmark", "fa-bars");
   }
-  // icons.classList.toggle("fa-bars");
-  // icons.classList.toggle("fa-xmark");
+  icons.classList.toggle("fa-bars");
+  icons.classList.toggle("fa-xmark");
 });
 
 document.addEventListener("click", (e) => {
@@ -58,9 +58,8 @@ darkMode.addEventListener("click", () => {
     know.style.backgroundColor = "#fff";
   }
 });
-// VIDEO
 
-// POP
+// TIME GREETING
 setTimeout(() => {
   const currentHour = new Date().getHours();
   let welcomeText = "";
@@ -90,6 +89,15 @@ prevBtn.addEventListener("click", () => {
 });
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+// const input = document.querySelector("input");
+
+// input.addEventListener("input", (e) => {
+//   if (!e.target.validity.badInput()) {
+//     e.target.setCustomValidity("Please my people, match as required.");
+//   }
+//   console.log(e.target.rangeOverflow());
+// });
 
 /*MODEL */
 
