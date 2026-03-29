@@ -110,12 +110,14 @@ form.addEventListener("submit", (e)=>{
     name.classList.add("border-line")
     nameMessage.textContent= "Name is needed"
     nameMessage.classList.add("messages")
+    // hasError = true
   }
 
   if(phone.value === "" || phone.value == null){
     phone.classList.add("border-line")
     phoneMessage.textContent= "Phone number is needed"
     phoneMessage.classList.add("messages")
+    // hasError = true
   }
 
 })
