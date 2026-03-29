@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- NAV BAR -->
-    <nav id="nav" class="nav">
+    <!-- <nav id="nav" class="nav">
       <a href="#hero-section"><h1 id="logo" class="logo">enoch</h1></a>
       <button id="dark-mode-btn" class="dark-mode-btn">
         <i class="fas fa-moon"></i>
@@ -44,10 +44,10 @@
           <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
       </ul>
-    </nav>
+    </nav> -->
 
     <!-- HERO SECTION -->
-    <section id="hero-section" class="hero-section">
+    <!-- <section id="hero-section" class="hero-section">
       <video muted id="video" class="video" autoplay loop>
         <source src="video.mp4" />
       </video>
@@ -73,16 +73,16 @@
       <div>
         <img src="" alt="" />
       </div>
-    </section>
+    </section> -->
 
     <!-- IMAGE---------------------------------------------------------------------------------- -->
-    <section class="avatar" id="avatar">
+    <!-- <section class="avatar" id="avatar">
       <h1 id="greet-customers" class="greet-customers"></h1>
       <img class="my-avatar" src="maski.png" alt="myavatar" />
-    </section>
+    </section> -->
 
     <!-- ABOUT US SECTIONS -->
-    <section class="know" id="know">
+    <!-- <section class="know" id="know">
       <h1 class="about-me">about me</h1>
       <div class="know-me" id="know-me">
         I am an Frontend Developer passionate about building modern and
@@ -100,10 +100,10 @@
         coding, I am also interested in content creation, especially
         transforming stories into engaging digital content.
       </div>
-    </section>
+    </section> -->
 
     <!-- PROJECT SECTIONS/CAROUSEL -->
-    <section class="carousel" id="carousel">
+    <!-- <section class="carousel" id="carousel">
       <h1 class="project-title">project</h1>
       <div class="carousel-container" id="carousel-container">
         <div class="project-box carousel-item">
@@ -129,13 +129,14 @@
       </div>
       <button class="control-btn next" id="next">Next</button>
       <button class="control-btn prev" id="pre">Prev</button>
-    </section>
+    </section> -->
 
     <!-- CONTACT SECTION -->
 
-    <section id="contact" class="contact">
-      <form action="" id="form" class="form">
-        <h1 class="con-head">Contact us</h1>
+    <section id="form-section" class="form-section">
+      <form action="" id="registration-form" class="registration-form">
+      <h1 id="errorMessage" class="errorMessage"></h1>
+        <h1 class="form-head">Contact us</h1>
         <div>
           <input
             type="text"
@@ -144,23 +145,25 @@
             placeholder="Enter your name"
           />
         </div>
-        <div>
+        <small id="nameMessage" class="nameMessage"></small>
+        <!-- <div>
           <input
             type="email"
             id="email"
             class="email"
             placeholder="Enter your email"
           />
-        </div>
+        </div> -->
         <div>
-          <input type="number" id="tel" class="tel" placeholder="Phone" />
+          <input type="number" id="num-phone" class="num-phone" placeholder="Phone" />
+            <small id="phoneMessage" class="phoneMessage"></small>
         </div>
-        <textarea
+        <!-- <textarea
           name="textarea"
           id="textarea"
           class="textarea"
           placeholder="Enter your message here"
-        ></textarea>
+        ></textarea> -->
         <div><button id="send" class="send">send</button></div>
       </form>
     </section>

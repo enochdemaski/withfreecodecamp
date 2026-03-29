@@ -360,7 +360,7 @@ body.dark-mode {
 
 /* CONTACT FORM */
 
-.contact {
+.form-section {
   background-color: #f4f4f4;
   width: 100%;
   margin-top: 3%;
@@ -369,13 +369,13 @@ body.dark-mode {
   margin-bottom: 20px;
 }
 
-.contact:hover {
+.form-section:hover {
   background-color: var(--color-bgs);
   box-shadow: 10px 4px 10px 3px #b8b8b8;
   border-radius: 40px;
 }
 
-.form {
+.registration-form {
   background-color: #fff;
   border: 2px dashed #000;
   border-radius: 40px;
@@ -385,11 +385,11 @@ body.dark-mode {
   margin-left: 5px;
 }
 
-.form:hover {
+.registration-form:hover {
   box-shadow: 30px 4px 10px 10px #ffffff;
 }
 
-.con-head {
+.form-head {
   margin: auto;
   font-size: 50px;
 }
@@ -422,7 +422,7 @@ textarea::placeholder {
   outline: none;
 }
 
-.tel {
+.num-phone {
   width: 80%;
   height: 50px;
   font-weight: bold;
@@ -443,6 +443,7 @@ textarea::placeholder {
 }
 
 .send {
+  background: linear-gradient(to bottom, #fff, #919195);
   width: 70%;
   height: 40px;
   font-size: 16px;
@@ -453,6 +454,28 @@ textarea::placeholder {
   margin-top: 13px;
   margin-bottom: 8px;
   margin-left: 22px;
+}
+
+/* DYNAMIC STYLES */
+
+
+  .messages{
+    background-color: #ff0000;
+    z-index: 300;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #cf0000ef;
+    font-weight: bolder;
+    color: #ffffff;
+    padding: 7px;
+    font-size: 17px;
+    margin-top: 1px;
+    display: block;
+  }
+
+
+.border-line{
+  border-bottom: 1px solid #ff0000;
 }
 
 /* ANIMATION */
