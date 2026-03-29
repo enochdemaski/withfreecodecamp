@@ -474,9 +474,26 @@ textarea::placeholder {
   }
 
 
-.border-line{
+.Erro-border-line{
   border-bottom: 1px solid #ff0000;
 }
+
+.accept-border-line{
+  border-bottom: 1px solid #0dff00;
+}
+
+.error-btn{
+  background: #ff0000;
+  border: 2px solid #000;
+  color: #fff;
+}
+
+.accept-btn{
+  background: #05ed0d;
+  border: 2px dotted #fff;
+  color: #fff;
+}
+
 
 /* ANIMATION */
 /* button {

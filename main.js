@@ -1,92 +1,92 @@
-const video = document.getElementById("video");
-const menuBtn = document.getElementById("toggle-btn");
-const mobileMenu = document.getElementById("menu");
-const darkMode = document.getElementById("dark-mode-btn");
-const nav = document.getElementById("nav");
-const logo = document.querySelector("#nav a #logo");
-const icon = darkMode.querySelector("i");
-const icons = menuBtn.querySelector("i");
-const greetCustomer = document.querySelector("#greet-customers");
-const contact = document.getElementById("reach");
-const know = document.getElementById("know");
-const track = document.querySelector(".carousel-container");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
+// const video = document.getElementById("video");
+// const menuBtn = document.getElementById("toggle-btn");
+// const mobileMenu = document.getElementById("menu");
+// const darkMode = document.getElementById("dark-mode-btn");
+// const nav = document.getElementById("nav");
+// const logo = document.querySelector("#nav a #logo");
+// const icon = darkMode.querySelector("i");
+// const icons = menuBtn.querySelector("i");
+// const greetCustomer = document.querySelector("#greet-customers");
+// const contact = document.getElementById("reach");
+// const know = document.getElementById("know");
+// const track = document.querySelector(".carousel-container");
+// const nextBtn = document.querySelector(".next");
+// const prevBtn = document.querySelector(".prev");
 
 //MENU BTN
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("show");
-  if (icons.classList.contains("fa-bars")) {
-    icons.classList.replace("fa-bars", "fa-xmark");
-  } else {
-    icons.classList.replace("fa-xmark", "fa-bars");
-  }
-//   icons.classList.toggle("fa-bars");
-//   icons.classList.toggle("fa-xmark");
-});
+// menuBtn.addEventListener("click", () => {
+//   mobileMenu.classList.toggle("show");
+//   if (icons.classList.contains("fa-bars")) {
+//     icons.classList.replace("fa-bars", "fa-xmark");
+//   } else {
+//     icons.classList.replace("fa-xmark", "fa-bars");
+//   }
+// //   icons.classList.toggle("fa-bars");
+// //   icons.classList.toggle("fa-xmark");
+// });
 
-document.addEventListener("click", (e) => {
-  if (mobileMenu.contains(e.target) || !menuBtn.contains(e.target)) {
-    mobileMenu.classList.remove("show");
-    icons.classList.replace("fa-xmark", "fa-bars");
-  }
-});
+// document.addEventListener("click", (e) => {
+//   if (mobileMenu.contains(e.target) || !menuBtn.contains(e.target)) {
+//     mobileMenu.classList.remove("show");
+//     icons.classList.replace("fa-xmark", "fa-bars");
+//   }
+// });
 
 // FOR DARK AND LIGHT MODE
-let isDark = false;
-darkMode.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  isDark = !isDark;
+// let isDark = false;
+// darkMode.addEventListener("click", () => {
+//   document.body.classList.toggle("dark-mode");
+//   isDark = !isDark;
 
-  if (isDark) {
-    icon.classList.replace("fa-moon", "fa-sun");
-    darkMode.style.backgroundColor = "#fff";
-    darkMode.style.color = "#000";
-    nav.style.backgroundColor = "#fff";
-    logo.style.color = "#000";
-    contact.style.color = "#fff";
-    know.style.color = "#fff";
-    know.style.backgroundColor = "#000";
-  } else {
-    icon.classList.replace("fa-sun", "fa-moon");
-    darkMode.style.backgroundColor = "#000";
-    darkMode.style.color = "#fff";
-    nav.style.backgroundColor = "#000";
-    logo.style.color = "#fff";
-    contact.style.color = "#000";
-    know.style.color = "#000";
-    know.style.backgroundColor = "#fff";
-  }
-});
+//   if (isDark) {
+//     icon.classList.replace("fa-moon", "fa-sun");
+//     darkMode.style.backgroundColor = "#fff";
+//     darkMode.style.color = "#000";
+//     nav.style.backgroundColor = "#fff";
+//     logo.style.color = "#000";
+//     contact.style.color = "#fff";
+//     know.style.color = "#fff";
+//     know.style.backgroundColor = "#000";
+//   } else {
+//     icon.classList.replace("fa-sun", "fa-moon");
+//     darkMode.style.backgroundColor = "#000";
+//     darkMode.style.color = "#fff";
+//     nav.style.backgroundColor = "#000";
+//     logo.style.color = "#fff";
+//     contact.style.color = "#000";
+//     know.style.color = "#000";
+//     know.style.backgroundColor = "#fff";
+//   }
+// });
 
-// TIME GREETING
-setTimeout(() => {
-  const currentHour = new Date().getHours();
-  let welcomeText = "";
+// TIME GREETING/MAKE SURE YOU ADD LOOP LATER ON
+// setTimeout(() => {
+//   const currentHour = new Date().getHours();
+//   let welcomeText = "";
 
-  if (currentHour < 12) {
-    welcomeText = "Good Morning, welcome to my portfolio.";
-  } else if (currentHour < 18) {
-    welcomeText = "Good Afternoon, welcome to my portfolio.";
-  } else {
-    welcomeText = "Good Evening, welcome to my portfolio.";
-  }
-  greetCustomer.textContent = welcomeText;
+//   if (currentHour < 12) {
+//     welcomeText = "Good Morning, welcome to my portfolio.";
+//   } else if (currentHour < 18) {
+//     welcomeText = "Good Afternoon, welcome to my portfolio.";
+//   } else {
+//     welcomeText = "Good Evening, welcome to my portfolio.";
+//   }
+//   greetCustomer.textContent = welcomeText;
 
-  setTimeout(() => {
-    greetCustomer.remove();
-  }, 2000);
-}, 1000);
+//   setTimeout(() => {
+//     greetCustomer.remove();
+//   }, 2000);
+// }, 1000);
 
 /*CAROUSEL____________________________________------_______--- */
 
-nextBtn.addEventListener("click", () => {
-  track.scrollBy({ left: track.offsetWidth, behavior: "smooth" });
-});
+// nextBtn.addEventListener("click", () => {
+//   track.scrollBy({ left: track.offsetWidth, behavior: "smooth" });
+// });
 
-prevBtn.addEventListener("click", () => {
-  track.scrollBy({ left: -track.offsetWidth, behavior: "smooth" });
-});
+// prevBtn.addEventListener("click", () => {
+//   track.scrollBy({ left: -track.offsetWidth, behavior: "smooth" });
+// });
 
 
 //FOR FORM VALIDATION
@@ -97,32 +97,65 @@ const phone = document.getElementById("num-phone")
 const errorMessage = document.getElementById("errorMessage")
 const nameMessage = document.getElementById("nameMessage")
 const phoneMessage = document.getElementById("phoneMessage")
+const btn = document.getElementById("send")
 
+// errorMessage.classList.remove("messages")
+// errorMessage.textContent= ""
+// nameMessage.classList.remove("messages")
+// nameMessage.textContent= ""
+// phoneMessage.classList.remove("messages")
+// phoneMessage.textContent= ""
 
 let hasError  = false;
-form.addEventListener("submit", (e)=>{
-
-   e.preventDefault()
-  errorMessage.textContent= "Form is empty, please enter data"
-  errorMessage.classList.add("messages")
-
+form.addEventListener("submit",(e)=>{
+  
   if(name.value === "" || name.value == null){
-    name.classList.add("border-line")
+    name.classList.add("Erro-border-line")
     nameMessage.textContent= "Name is needed"
     nameMessage.classList.add("messages")
-    // hasError = true
+    hasError = true
   }
 
   if(phone.value === "" || phone.value == null){
-    phone.classList.add("border-line")
+    phone.classList.add("Erro-border-line")
     phoneMessage.textContent= "Phone number is needed"
     phoneMessage.classList.add("messages")
-    // hasError = true
+    hasError = true
   }
 
+if(hasError){
+  e.preventDefault()//PREVENT FORM FROM SUBMITTING
+  errorMessage.textContent= "Form is empty, please enter data"
+  errorMessage.classList.add("messages")
+  btn.classList.add("error-btn")
+};
 })
 
 
+
+name.addEventListener("input", ()=>{
+if(name.value !== ""){
+errorMessage.classList.remove("messages")
+errorMessage.textContent= ""
+nameMessage.classList.remove("messages")
+nameMessage.textContent= ""
+name.classList.add("accept-border-line")
+btn.classList.add("accept-btn")
+hasError = false;
+}
+})
+
+phone.addEventListener("input", ()=>{
+if(phone.value !== ""){
+errorMessage.classList.remove("messages")
+errorMessage.textContent= ""
+phoneMessage.classList.remove("messages")
+phoneMessage.textContent= ""
+phone.classList.add("accept-border-line")
+btn.classList.add("accept-btn")
+hasError = false;
+}
+})
 /*--------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 // const input = document.querySelector("input");
