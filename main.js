@@ -20,7 +20,7 @@
 //     icons.classList.replace("fa-bars", "fa-xmark");
 //   } else {
 //     icons.classList.replace("fa-xmark", "fa-bars");
-//   }
+  // }
 // //   icons.classList.toggle("fa-bars");
 // //   icons.classList.toggle("fa-xmark");
 // });
@@ -99,63 +99,104 @@ const nameMessage = document.getElementById("nameMessage")
 const phoneMessage = document.getElementById("phoneMessage")
 const btn = document.getElementById("send")
 
-// errorMessage.classList.remove("messages")
-// errorMessage.textContent= ""
-// nameMessage.classList.remove("messages")
-// nameMessage.textContent= ""
-// phoneMessage.classList.remove("messages")
-// phoneMessage.textContent= ""
+const getNameValue = ()=> 
+name.value.trim()
 
-let hasError  = false;
-form.addEventListener("submit",(e)=>{
-  
-  if(name.value === "" || name.value == null){
-    name.classList.add("Erro-border-line")
+// function getNameValue(){
+//   return name.value.trim();
+// }
+
+
+form.addEventListener("submit", (e)=>{
+  e.preventDefault()
+errorMessage.textContent= "Form is empty, please fill all field"
+errorMessage.classList.add("messages")
+  console.log("form not submitted")
+
+
+  if(getNameValue() === ""){
     nameMessage.textContent= "Name is needed"
     nameMessage.classList.add("messages")
-    hasError = true
+    name.classList.add("erro-border-line")
+    console.log("Need name")
   }
 
-  if(phone.value === "" || phone.value == null){
-    phone.classList.add("Erro-border-line")
-    phoneMessage.textContent= "Phone number is needed"
-    phoneMessage.classList.add("messages")
-    hasError = true
-  }
-
-if(hasError){
-  e.preventDefault()//PREVENT FORM FROM SUBMITTING
-  errorMessage.textContent= "Form is empty, please enter data"
-  errorMessage.classList.add("messages")
-  btn.classList.add("error-btn")
-};
 })
-
-
 
 name.addEventListener("input", ()=>{
-if(name.value !== ""){
-errorMessage.classList.remove("messages")
-errorMessage.textContent= ""
-nameMessage.classList.remove("messages")
-nameMessage.textContent= ""
-name.classList.add("accept-border-line")
-btn.classList.add("accept-btn")
-hasError = false;
-}
+  if(getNameValue() !== ""){
+    nameMessage.textContent= "";
+    nameMessage.classList.remove("messages")
+    name.classList.add("accept-border-line")
+    errorMessage.textContent= ""
+    errorMessage.classList.remove("messages")
+  }
+
+  //   else if(!/^[a-zA-Z\s]+$/.test(getNameValue())){
+  //   nameMessage.textContent= "Name must contain only letters"
+  //   nameMessage.classList.add("messages")
+  //   name.classList.add("erro-border-line")
+  // }
 })
 
-phone.addEventListener("input", ()=>{
-if(phone.value !== ""){
-errorMessage.classList.remove("messages")
-errorMessage.textContent= ""
-phoneMessage.classList.remove("messages")
-phoneMessage.textContent= ""
-phone.classList.add("accept-border-line")
-btn.classList.add("accept-btn")
-hasError = false;
-}
-})
+
+
+
+
+// Experiment
+// const form = document.getElementById("registration-form")
+// const nameInput = document.getElementById("user-name")
+// const nameText = document.getElementById("nameMessage")
+// const error = document.getElementById("errorMessage")
+// const phone = document.getElementById("num-phone")
+// const phoneMessage = document.getElementById("phoneMessage")
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault()
+//    error.textContent= "Form cant be empty"
+//    error.classList.add("messages")
+
+//   let nameValue = nameInput.value.trim()
+
+//   if(nameValue === ""){
+//     nameText.textContent= "Name is required"
+//     nameText.classList.add("messages")
+//     nameInput.classList.add("Erro-border-line")
+//     nameInput.classList.remove("accept-border-line")
+//   }
+  
+//   else if(!/^[a-zA-Z\s]+$/.test(nameValue)){
+//     nameText.textContent= "Name must contain only letters"
+//     nameText.classList.add("messages")
+//     nameInput.classList.add("Erro-border-line")
+//   }
+
+//   else if(nameValue.length < 3){
+//     nameText.textContent= "Name should be 3 letters and above"
+//     nameText.classList.add("messages")
+//     nameInput.classList.add("Erro-border-line")
+   
+//   }
+
+//   else if(nameValue){
+//     let capsName = nameValue;
+//     capsName.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+//     nameInput.value = capsName;
+//     nameInput.classList.remove("Erro-border-line")
+//     nameInput.classList.add("accept-border-line")
+//   }
+
+  
+// })
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 // const input = document.querySelector("input");
