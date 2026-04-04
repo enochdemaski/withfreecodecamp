@@ -132,11 +132,6 @@ name.addEventListener("input", ()=>{
     errorMessage.classList.remove("messages")
   }
 
-  //   else if(!/^[a-zA-Z\s]+$/.test(getNameValue())){
-  //   nameMessage.textContent= "Name must contain only letters"
-  //   nameMessage.classList.add("messages")
-  //   name.classList.add("erro-border-line")
-  // }
 })
 
 
