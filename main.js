@@ -99,90 +99,83 @@ const nameMessage = document.getElementById("nameMessage")
 const phoneMessage = document.getElementById("phoneMessage")
 const btn = document.getElementById("send")
 
+// Global funtion to get the trimmed name value
 const getNameValue = ()=> 
 name.value.trim()
 
-// function getNameValue(){
-//   return name.value.trim();
-// }
+// Helper function to check if a string contains only letters
+const namePattern = /^[A-Za-z\s]+$/
 
 
+// LOGIC FOR ERRORS
 form.addEventListener("submit", (e)=>{
-  e.preventDefault()
-errorMessage.textContent= "Form is empty, please fill all field"
-errorMessage.classList.add("messages")
-  console.log("form not submitted")
+e.preventDefault() //Prevent form from submitting
+  errorMessage.textContent= "Form is empty, please fill all fields"
+  errorMessage.classList.add("messages")
+  nameMessage.textContent= "Name is Needed"
+  nameMessage.classList.add("messages")
+  name.classList.add("erro-border-line")
+  phoneMessage.textContent= "phone is Needed"
+  phoneMessage.classList.add("messages")
+  phone.classList.add("error-border-line")
 
-
-  if(getNameValue() === ""){
-    nameMessage.textContent= "Name is needed"
-    nameMessage.classList.add("messages")
-    name.classList.add("erro-border-line")
-    console.log("Need name")
-  }
+ 
 
 })
+
+//  name.addEventListener("input", ()=>{
+//    if(!namePattern.test(getNameValue())){
+//     nameMessage.textContent= "Name should contain only letters"
+//     nameMessage.classList.add("messages")
+//     name.classList.add("error-border-line")
+// }
+// })
+
 
 name.addEventListener("input", ()=>{
-  if(getNameValue() !== ""){
-    nameMessage.textContent= "";
-    nameMessage.classList.remove("messages")
-    name.classList.add("accept-border-line")
+  const value = getNameValue()
+  if(value === ""){
+    nameMessage.textContent= "Name is needed"
+    nameMessage.classList.add("messages")
+    name.classList.remove("accept-border-line")
+    name.classList.add("error-border-line")
+  }
+  
+  else if(!namePattern.test(value)){
+    nameMessage.textContent= "Only letters are allowed"
+    nameMessage.classList.add("messages")
+    name.classList.remove("accept-border-line")
+    name.classList.add("error-border-line")
+  }
+  
+  else{
     errorMessage.textContent= ""
     errorMessage.classList.remove("messages")
+    nameMessage.textContent= ""
+    nameMessage.classList.remove("messages")
+    name.classList.add("accept-border-line")
+    name.classList.remove("error-border-line")
   }
-
 })
 
+phone.addEventListener("input", ()=>{
+  if(phone === ""){
+    phoneMessage.textContent= "Phone is needed"
+    phoneMessage.classList.add("messages")
+    phone.classList.remove("accept-border-line")
+    phone.classList.add("error-border-line")
+  }
 
+   else{
+    errorMessage.textContent=""
+    errorMessage.classList.remove("messages")
+    phoneMessage.textContent= ""
+    phoneMessage.classList.remove("messages")
+    phone.classList.add("accept-border-line")
+    phone.classList.remove("error-border-line")
+  }
+})
 
-
-
-// Experiment
-// const form = document.getElementById("registration-form")
-// const nameInput = document.getElementById("user-name")
-// const nameText = document.getElementById("nameMessage")
-// const error = document.getElementById("errorMessage")
-// const phone = document.getElementById("num-phone")
-// const phoneMessage = document.getElementById("phoneMessage")
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault()
-//    error.textContent= "Form cant be empty"
-//    error.classList.add("messages")
-
-//   let nameValue = nameInput.value.trim()
-
-//   if(nameValue === ""){
-//     nameText.textContent= "Name is required"
-//     nameText.classList.add("messages")
-//     nameInput.classList.add("Erro-border-line")
-//     nameInput.classList.remove("accept-border-line")
-//   }
-  
-//   else if(!/^[a-zA-Z\s]+$/.test(nameValue)){
-//     nameText.textContent= "Name must contain only letters"
-//     nameText.classList.add("messages")
-//     nameInput.classList.add("Erro-border-line")
-//   }
-
-//   else if(nameValue.length < 3){
-//     nameText.textContent= "Name should be 3 letters and above"
-//     nameText.classList.add("messages")
-//     nameInput.classList.add("Erro-border-line")
-   
-//   }
-
-//   else if(nameValue){
-//     let capsName = nameValue;
-//     capsName.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
-//     nameInput.value = capsName;
-//     nameInput.classList.remove("Erro-border-line")
-//     nameInput.classList.add("accept-border-line")
-//   }
-
-  
-// })
 
 
 
