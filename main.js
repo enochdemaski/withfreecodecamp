@@ -103,52 +103,92 @@ const btn = document.getElementById("send")
 const getNameValue = ()=> 
 name.value.trim()
 
+const getPhoneValue = ()=> 
+phone.value.trim()
+
 // Helper function to check if a string contains only letters
 const namePattern = /^[A-Za-z\s]+$/
+const phonePattern = /^\d{11}$/
 
 
-// LOGIC FOR ERRORS
+
 form.addEventListener("submit", (e)=>{
-e.preventDefault() //Prevent form from submitting
-  errorMessage.textContent= "Form is empty, please fill all fields"
-  errorMessage.classList.add("messages")
-  nameMessage.textContent= "Name is Needed"
+  let isValid = true;
+
+// FIRST STEP IS TO CLEAR PREVIOUS MESSAGES
+errorMessage.textContent= ""
+nameMessage.textContent= ""
+phoneMessage.textContent= ""
+errorMessage.classList.remove("messages")
+nameMessage.classList.remove("messages")
+phoneMessage.classList.remove("messages")
+name.classList.remove("error.border-line", "accept-border-line")
+phone.classList.remove("error.border-line", "accept-border-line")
+
+//CHECK EMPTY NAME
+if(getNameValue() === ""){
+  isValid = false
+  nameMessage.textContent= "Name is needed"
   nameMessage.classList.add("messages")
-  name.classList.add("erro-border-line")
-  phoneMessage.textContent= "phone is Needed"
+  name.classList.add("error-border-line")
+}
+
+//CHECK NAME FORMAT
+else if(!namePattern.test(getNameValue())){
+isValid = false;
+nameMessage.textContent= "Only letters are allowed"
+nameMessage.classList.add("messages")
+name.classList.add("error-border-line")
+}else{
+nameMessage.textContent= ""
+nameMessage.classList.remove("messages")
+name.classList.add("accept-border-line")
+}
+
+if(getPhoneValue() === ""){
+  isValid = false
+  phoneMessage.textContent= "Phone number is needed."
   phoneMessage.classList.add("messages")
   phone.classList.add("error-border-line")
+}
 
+//CHECK NUMBER FORMAT
+else if(!phonePattern.test(getPhoneValue())){
+isValid = false;
+phoneMessage.textContent= "Only 11 digits are allowed"
+phoneMessage.classList.add("messages")
+phone.classList.add("error-border-line")
+}
+else{
+phoneMessage.textContent= ""
+phoneMessage.classList.remove("messages")
+phone.classList.add("accept-border-line")
+}
+
+//IF FORM IS NOT VALID, DONT SUBMIT
+if(!isValid){
+e.preventDefault()
+errorMessage.textContent= "Form is empty, please fill all spaces."
+errorMessage.classList.add("messages")
+}
  
-
 })
-
-//  name.addEventListener("input", ()=>{
-//    if(!namePattern.test(getNameValue())){
-//     nameMessage.textContent= "Name should contain only letters"
-//     nameMessage.classList.add("messages")
-//     name.classList.add("error-border-line")
-// }
-// })
-
 
 name.addEventListener("input", ()=>{
   const value = getNameValue()
   if(value === ""){
-    nameMessage.textContent= "Name is needed"
-    nameMessage.classList.add("messages")
-    name.classList.remove("accept-border-line")
-    name.classList.add("error-border-line")
+  nameMessage.textContent= "Name is needed"
+  nameMessage.classList.add("messages")
+  name.classList.remove("accept-border-line")
+  name.classList.add("error-border-line")
   }
-  
+
   else if(!namePattern.test(value)){
     nameMessage.textContent= "Only letters are allowed"
     nameMessage.classList.add("messages")
     name.classList.remove("accept-border-line")
     name.classList.add("error-border-line")
-  }
-  
-  else{
+  }else{ 
     errorMessage.textContent= ""
     errorMessage.classList.remove("messages")
     nameMessage.textContent= ""
@@ -159,15 +199,24 @@ name.addEventListener("input", ()=>{
 })
 
 phone.addEventListener("input", ()=>{
-  if(phone === ""){
-    phoneMessage.textContent= "Phone is needed"
-    phoneMessage.classList.add("messages")
-    phone.classList.remove("accept-border-line")
-    phone.classList.add("error-border-line")
-  }
 
-   else{
-    errorMessage.textContent=""
+  let phoneNumber = getPhoneValue()
+
+if(phoneNumber === ""){
+  phoneMessage.textContent= "Phone is needed, and must be 11 digits"
+  phoneMessage.classList.add("messages")
+  phone.classList.add("error-border-line")
+}
+
+else if(!phonePattern.test(phoneNumber)){
+phoneMessage.textContent= "Please enter 11 digits only"
+phoneMessage.classList.add("messages")
+phone.classList.add("error-border-line")
+}
+
+
+else{ 
+    errorMessage.textContent= ""
     errorMessage.classList.remove("messages")
     phoneMessage.textContent= ""
     phoneMessage.classList.remove("messages")
@@ -175,6 +224,7 @@ phone.addEventListener("input", ()=>{
     phone.classList.remove("error-border-line")
   }
 })
+
 
 
 
