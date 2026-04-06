@@ -97,17 +97,28 @@ const phone = document.getElementById("num-phone")
 const errorMessage = document.getElementById("errorMessage")
 const nameMessage = document.getElementById("nameMessage")
 const phoneMessage = document.getElementById("phoneMessage")
+const email = document.getElementById("email")
+const textarea = document.getElementById("textarea")
+const emailMessage = document.getElementById("emailMessage")
+const textAreaMessage = document.getElementById("textAreaMessage")
 const btn = document.getElementById("send")
 
 // Global funtion to get the trimmed name value
 const getNameValue = ()=> 
 name.value.trim()
 
+const getEmailValue = ()=> 
+email.value.trim()
+
+const getTextValue = () => 
+textarea.value.trim()
+
 const getPhoneValue = ()=> 
 phone.value.trim()
 
 // Helper function to check if a string contains only letters
 const namePattern = /^[A-Za-z\s]+$/
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const phonePattern = /^\d{11}$/
 
 
@@ -118,11 +129,17 @@ form.addEventListener("submit", (e)=>{
 // FIRST STEP IS TO CLEAR PREVIOUS MESSAGES
 errorMessage.textContent= ""
 nameMessage.textContent= ""
+emailMessage.textContent= ""
+textAreaMessage.textContent= ""
 phoneMessage.textContent= ""
 errorMessage.classList.remove("messages")
 nameMessage.classList.remove("messages")
+emailMessage.classList.remove("messages")
+textAreaMessage.classList.remove("messages")
 phoneMessage.classList.remove("messages")
 name.classList.remove("error.border-line", "accept-border-line")
+email.classList.remove("error-border-line", "accept-border-line")
+textarea.classList.remove("error-border-line", "accept-border-line")
 phone.classList.remove("error.border-line", "accept-border-line")
 
 //CHECK EMPTY NAME
@@ -133,7 +150,7 @@ if(getNameValue() === ""){
   name.classList.add("error-border-line")
 }
 
-//CHECK NAME FORMAT
+//Check name format
 else if(!namePattern.test(getNameValue())){
 isValid = false;
 nameMessage.textContent= "Only letters are allowed"
@@ -145,6 +162,28 @@ nameMessage.classList.remove("messages")
 name.classList.add("accept-border-line")
 }
 
+//CHECKING FOR EMAIL
+if(getEmailValue() === ""){
+  isValid = false
+  emailMessage.textContent= "please enter an email address"
+  emailMessage.classList.add("messages")
+  email.classList.add("error-border-line")
+}
+
+//Check email format
+else if(!emailPattern.test(getEmailValue())){
+  isValid = false
+  emailMessage.textContent= "The email is not valid"
+  emailMessage.classList.add("messages")
+  email.classList.add("error-border-line")
+}else{
+   emailMessage.textContent= ""
+  emailMessage.classList.remove("messages")
+  email.classList.add("accept-border-line")
+}
+
+
+// CHECKING FOR PHONE
 if(getPhoneValue() === ""){
   isValid = false
   phoneMessage.textContent= "Phone number is needed."
@@ -163,6 +202,15 @@ else{
 phoneMessage.textContent= ""
 phoneMessage.classList.remove("messages")
 phone.classList.add("accept-border-line")
+}
+
+
+//FOR TEXTAREA
+if(getTextValue() === ""){
+  isValid = false
+  textAreaMessage.textContent= "How do you want us to serve you?"
+  textAreaMessage.classList.add("messages")
+  textAreaMessage.classList.add("error-border-line")
 }
 
 //IF FORM IS NOT VALID, DONT SUBMIT
@@ -222,6 +270,42 @@ else{
     phoneMessage.classList.remove("messages")
     phone.classList.add("accept-border-line")
     phone.classList.remove("error-border-line")
+  }
+})
+
+email.addEventListener("input", () =>{
+  let emailValue = getEmailValue()
+  if(emailValue === ""){
+    emailMessage.textContent= "Please enter a valid email address"
+    emailMessage.classList.add("messages")
+    email.classList.add("error-border-line")
+  }
+
+  else if(!emailPattern.test(emailValue)){
+    emailMessage.textContent= "Email must be valid"
+    emailMessage.classList.add("messages")
+    email.classList.add("error-border-line")
+  }else{
+    errorMessage.textContent= ""
+    errorMessage.classList.remove("messages")
+    emailMessage.textContent= ""
+    emailMessage.classList.remove("messages")
+    email.classList.add("accept-border-line")
+    email.classList.remove("error-border-line")
+  }
+})
+
+textarea.addEventListener("input", ()=>{
+  let textBox = getTextValue()
+  if(textBox === ""){
+    textAreaMessage.textContent="This will help us understand you better."
+    textAreaMessage.classList.add("messages")
+    textarea.classList.add("error-border-line")
+  }else{
+    errorMessage.textContent= ""
+    textAreaMessage.textContent="."
+    textAreaMessage.classList.remove("messages")
+    textarea.classList.add("accept-border-line")
   }
 })
 
