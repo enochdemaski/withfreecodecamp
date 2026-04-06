@@ -226,12 +226,13 @@ if(getTextValue() === ""){
   isValid = false
   textAreaMessage.textContent= "How do you want us to serve you?"
   textAreaMessage.classList.add("messages")
-  textAreaMessage.classList.add("error-border-line")
+  textarea.classList.add("error-border-line")
 }
 
 //IF FORM IS NOT VALID, DONT SUBMIT
 if(!isValid){
 e.preventDefault()
+btn.classList.add("messages")
 errorMessage.textContent= "Form is empty, please fill all spaces."
 errorMessage.classList.add("messages")
 }

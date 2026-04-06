@@ -440,7 +440,7 @@ textarea::placeholder {
 }
 
 .send {
-  background: linear-gradient(to bottom, #fff, #919195);
+  background-color: #808080;
   width: 70%;
   height: 40px;
   font-size: 16px;
@@ -467,6 +467,7 @@ textarea::placeholder {
     padding: 7px;
     font-size: 17px;
     margin-top: 1px;
+    margin-left: 1px;
     display: block;
   }
 
